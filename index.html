@@ -1,0 +1,1040 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jang Ryujin</title>
+<meta name="description" content="Jang Ryujin (장류진), Korean novelist and essayist. Author of To the Moon and The Pleasures and Sorrows of Work, published in 17 translated editions across 11 languages.">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Jang Ryujin 장류진">
+<meta property="og:description" content="Novelist, Essayist. Author of To the Moon and The Pleasures and Sorrows of Work.">
+<meta property="og:url" content="https://jangryujin.com/">
+<meta property="og:image" content="https://jangryujin.com/photo.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&family=Noto+Sans+KR:wght@300;700&display=swap">
+<style>
+:root {
+  /* Layout: one 720px column, read top to bottom like a rights sheet. Ruled rows
+     of year, title and detail. One sans family in two weights, light and bold,
+     with Korean set in the matching Korean sans; the paper is a pale
+     green-white with green-black ink and one olive accent. */
+  --bg: #F7F9F5;
+  --ink: #0B1406;
+  --mid: #474D42;
+  --light: #636A5E;
+  --rule: #DADDD5;
+  --faint: #7D8377;
+  --tint: #ECEFE4;
+  --accent: #4D541D;
+  --on-accent: #F7F9F5;
+
+  --font-body: "Lato", "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+
+  --col-year: 3.5rem;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12170F;
+    --ink: #E8ECE3;
+    --mid: #B9BFB2;
+    --light: #959C8E;
+    --rule: #2A3126;
+    --faint: #7A8173;
+    --tint: #1E2619;
+    --accent: #BAC37E;
+    --on-accent: #12170F;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12170F;
+  --ink: #E8ECE3;
+  --mid: #B9BFB2;
+  --light: #959C8E;
+  --rule: #2A3126;
+    --faint: #7A8173;
+  --tint: #1E2619;
+  --accent: #BAC37E;
+  --on-accent: #12170F;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+em, i { font-weight: 300; }
+
+p, h1, ul { margin: 0; }
+ul { padding: 0; list-style: none; }
+
+[lang="ko"] { word-break: keep-all; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+.link {
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1px;
+}
+.link:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.wrap {
+  max-width: 720px;
+  margin-inline: auto;
+  padding-inline: 32px;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  padding-block: 80px 64px;
+  border-bottom: 1px solid var(--rule);
+}
+.hero-inner {
+  display: flex;
+  gap: 48px;
+  align-items: flex-end;
+}
+.hero-photo {
+  display: block;
+  flex-shrink: 0;
+  width: 210px;
+  height: 315px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+.hero-text { flex: 1; min-width: 0; }
+.hero-name {
+  font-size: 2.25rem;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+.hero-name .ko {
+  margin-left: 0.5em;
+  font-size: 0.5em;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  color: var(--light);
+  white-space: nowrap;
+}
+.hero-desc {
+  max-width: 36rem;
+  font-size: 0.875rem;
+  line-height: 1.8;
+  color: var(--mid);
+  text-wrap: pretty;
+}
+.hero-desc strong {
+  color: var(--mid);
+  font-weight: 400;
+}
+.hero-desc .sep { color: var(--light); }
+
+/* ---------- Sections ---------- */
+section {
+  padding-block: 36px 72px;
+  border-bottom: 1px solid var(--rule);
+}
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.sub {
+  margin: 36px 0 6px;
+  font-size: 0.7rem;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mid);
+}
+.section-label + .sub { margin-top: 0; }
+
+/* Folded groups ("show more") */
+.more {
+  margin-top: 36px;
+  border-top: 1px solid var(--rule);
+}
+.more + .more { margin-top: 0; }
+.more:last-child { border-bottom: 1px solid var(--rule); }
+.more > summary.sub {
+  margin: 0;
+  padding-block: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+  cursor: pointer;
+}
+.more > summary::-webkit-details-marker { display: none; }
+.more > summary .n {
+  font-variant-numeric: tabular-nums;
+  color: var(--light);
+  letter-spacing: 0.04em;
+}
+.more > summary::after {
+  content: "+";
+  margin-left: auto;
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: 0;
+  color: var(--accent);
+}
+.more[open] > summary::after { content: "\2212"; }
+.more > summary:hover { color: var(--accent); }
+.more > summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+.more > ul { padding-bottom: 8px; }
+
+.more > summary .peek {
+  display: flex;
+  margin-left: auto;
+  padding-left: 8px;
+}
+.more > summary .peek img {
+  display: block;
+  height: 40px;
+  width: auto;
+  border-radius: 1px;
+  box-shadow: 0 0 0 1px var(--rule);
+}
+.more > summary .peek img + img { margin-left: 6px; }
+.more.has-peek > summary::after { margin-left: 14px; }
+.more.has-peek[open] > summary .peek { display: none; }
+.more.has-peek[open] > summary::after { margin-left: auto; }
+
+/* Ruled rows: year | title | detail */
+.item {
+  display: grid;
+  grid-template-columns: var(--col-year) minmax(0, 1fr) auto;
+  column-gap: 20px;
+  align-items: baseline;
+  padding-block: 13px;
+  border-bottom: 1px solid var(--rule);
+}
+.item:last-child { border-bottom: none; }
+.item.noyear { grid-template-columns: minmax(0, 1fr) auto; }
+.year {
+  font-size: 0.75rem;
+  color: var(--light);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.title {
+  min-width: 0;
+  font-size: 1.0625rem;
+  font-weight: 300;
+  line-height: 1.4;
+}
+.title a { transition: color 0.15s ease; }
+.title a:hover { color: var(--accent); }
+.title .ko,
+.name .ko {
+  display: inline-block;
+  max-width: 100%;
+  margin-left: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 300;
+  color: var(--light);
+}
+.name {
+  min-width: 0;
+  font-size: 0.9rem;
+}
+.detail {
+  max-width: 15rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--light);
+  text-align: right;
+}
+.detail.strong {
+  color: var(--light);
+  font-weight: 400;
+}
+
+/* Contact */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+.contact-grid > div { min-width: 0; }
+.contact-label {
+  margin-bottom: 6px;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--light);
+}
+.contact-name {
+  margin-bottom: 4px;
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--mid);
+}
+.contact-name .ko {
+  margin-left: 0.4rem;
+  font-weight: 300;
+  color: var(--light);
+  font-size: 0.8125rem;
+}
+.contact-note {
+  margin-top: 10px;
+  font-size: 0.75rem;
+  color: var(--mid);
+}
+.contact-email {
+  font-size: 0.85rem;
+  color: var(--mid);
+  overflow-wrap: anywhere;
+}
+.contact-email a:hover { color: var(--accent); }
+
+/* Translations */
+.intro {
+  margin-bottom: 40px;
+  font-size: 0.85rem;
+  line-height: 1.8;
+  color: var(--mid);
+}
+.intro strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+.tbook + .tbook { margin-top: 28px; }
+.tbook-title {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+.tbook-title .ko {
+  margin-left: 0.5rem;
+  font-size: 0.8125rem;
+  color: var(--light);
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.chip {
+  padding: 3px 10px;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  color: var(--mid);
+}
+.chip.en {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.chip.en-alt {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.chip.soon {
+  border: 0.5px dashed var(--faint);
+  color: var(--faint);
+}
+
+/* All editions: covers on a shared baseline, bibliographic caption below */
+.ed-group + .ed-group { margin-top: 40px; }
+.ed-group-title {
+  margin: 20px 0 16px;
+  font-size: 0.9rem;
+}
+.ed-group-title .ko {
+  margin-left: 0.5rem;
+  font-size: 0.78rem;
+  color: var(--light);
+}
+.ed-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px 24px;
+}
+.ed {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.ed-cover {
+  position: relative;
+  aspect-ratio: 5 / 7;
+  margin-bottom: 12px;
+}
+.ed-cover img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  border-radius: 1px;
+  box-shadow: 0 0 0 1px var(--rule);
+  transition: opacity 0.15s ease;
+}
+.ed-cover .ph {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 70%;
+  height: 100%;
+  background: var(--tint);
+  border: 1px solid var(--rule);
+  border-radius: 1px;
+}
+.ed:hover .ed-cover img { opacity: 0.85; }
+.ed-lang {
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--light);
+}
+.ed-title {
+  margin-top: 2px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+  transition: color 0.15s ease;
+}
+.ed:hover .ed-title { color: var(--accent); }
+.ed-meta {
+  margin-top: 4px;
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: var(--light);
+}
+.more > .ed-wrap { padding-bottom: 36px; }
+
+/* Press */
+.press-item {
+  padding-block: 13px;
+  border-bottom: 1px solid var(--rule);
+}
+.press-item:last-child { border-bottom: none; }
+.press-outlet {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--mid);
+}
+.press-quote {
+  margin-top: 5px;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  font-style: italic;
+  color: var(--mid);
+}
+.media-tag {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 1px 7px;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  font-size: 0.62rem;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--light);
+  vertical-align: 2px;
+}
+.press-headline {
+  margin-top: 5px;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--mid);
+}
+
+/* Education */
+.edu { display: grid; row-gap: 24px; }
+.edu-degree {
+  margin-bottom: 3px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--mid);
+}
+.edu-field {
+  font-size: 0.85rem;
+  color: var(--mid);
+}
+
+/* Social */
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.social a {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mid);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 2px;
+  transition: color 0.15s, border-color 0.15s;
+}
+.social a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+footer {
+  padding-block: 40px;
+  font-size: 0.75rem;
+  color: var(--light);
+}
+
+@media (max-width: 600px) {
+  .wrap { padding-inline: 20px; }
+  .hero { padding-block: 48px 40px; }
+  .hero-inner { flex-direction: column; align-items: flex-start; gap: 28px; }
+  .hero-photo { width: 200px; height: 300px; }
+  .hero-name { font-size: 2.2rem; }
+  section { padding-block: 28px 56px; }
+  .contact-grid { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .item { grid-template-columns: var(--col-year) minmax(0, 1fr); }
+  .item.noyear { grid-template-columns: minmax(0, 1fr); }
+  .item .detail {
+    grid-column: 2;
+    max-width: none;
+    margin-top: 4px;
+    text-align: left;
+  }
+  .item.noyear .detail { grid-column: 1; }
+  .ed-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 20px; }
+  .more > summary .peek img:nth-child(n+3) { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .title a, .social a, .ed-cover img, .ed-title { transition: none; }
+}
+</style>
+</head>
+<body>
+<div class="wrap" lang="en">
+
+  <header class="hero">
+    <div class="hero-inner">
+      <img class="hero-photo" src="photo.jpg" alt="Jang Ryujin" width="630" height="945">
+      <div class="hero-text">
+        <h1 class="hero-name">Jang Ryujin<span class="ko" lang="ko">장류진</span></h1>
+        <p class="hero-desc">
+          <strong>Novelist, Essayist</strong><br>
+          Author of <em>To the Moon</em> and <em>The Pleasures and Sorrows of Work</em> <span class="sep">·</span> 17 translated editions in 11 languages <span class="sep">·</span> Published in English by Bloomsbury <span class="sep">·</span> Adapted for television, radio and the stage<br><br>
+          Seoul, Republic of Korea
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="contact" aria-label="Contact">
+      <p class="section-label">Contact</p>
+      <div class="contact-grid">
+        <div>
+          <p class="contact-label">International</p>
+          <p class="contact-name"><a class="link" href="https://grayhawk-agency.com/books-authors/jang-ryujin/" target="_blank" rel="noopener">The Grayhawk Agency</a></p>
+          <p class="contact-note">Translation rights</p>
+          <p class="contact-email"><a href="mailto:info@grayhawk-agency.com">info@grayhawk-agency.com</a></p>
+        </div>
+        <div>
+          <p class="contact-label">Korea</p>
+          <p class="contact-name"><a class="link" href="http://www.blossomcreative.co.kr/" target="_blank" rel="noopener">Blossom Creative</a></p>
+          <p class="contact-note" lang="ko">국내 섭외 및 기타 업무</p>
+          <p class="contact-email"><a href="mailto:blossomcreative@naver.com">blossomcreative@naver.com</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" aria-label="Work">
+      <p class="section-label">Work</p>
+      <p class="sub">Books</p>
+      <ul>
+        <li class="item">
+          <span class="year">2025</span>
+          <span class="title"><a href="https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000011088186" target="_blank" rel="noopener">The Season We Sparkle</a><span class="ko" lang="ko">우리가 반짝이는 계절</span></span>
+          <span class="detail">Memoir</span>
+        </li>
+        <li class="item">
+          <span class="year">2023</span>
+          <span class="title"><a href="https://library.ltikorea.or.kr/originalworks/411914" target="_blank" rel="noopener">A Driving Course</a><span class="ko" lang="ko">연수</span></span>
+          <span class="detail">Short stories</span>
+        </li>
+        <li class="item">
+          <span class="year">2021</span>
+          <span class="title"><a href="https://library.ltikorea.or.kr/originalworks/406521" target="_blank" rel="noopener">To the Moon</a><span class="ko" lang="ko">달까지 가자</span></span>
+          <span class="detail">Novel</span>
+        </li>
+        <li class="item">
+          <span class="year">2020</span>
+          <span class="title"><a href="https://klwave.or.kr/klw/books/408919/featuredView.do" target="_blank" rel="noopener">Maya in Tokyo</a><span class="ko" lang="ko">도쿄의 마야</span></span>
+          <span class="detail">Short story</span>
+        </li>
+        <li class="item">
+          <span class="year">2019</span>
+          <span class="title"><a href="https://library.ltikorea.or.kr/originalworks/103910" target="_blank" rel="noopener">The Pleasures and Sorrows of Work</a><span class="ko" lang="ko">일의 기쁨과 슬픔</span></span>
+          <span class="detail">Short stories</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="translations" aria-label="Translated editions">
+      <p class="section-label">Translated Editions</p>
+      <p class="intro">Works published in 17 translated editions across 11 languages.</p>
+
+      <div class="tbook">
+        <p class="tbook-title">To the Moon<span class="ko" lang="ko">달까지 가자</span></p>
+        <ul class="chips">
+          <li class="chip">English</li>
+          <li class="chip">Chinese (Traditional)</li>
+          <li class="chip">Dutch</li>
+          <li class="chip">German</li>
+          <li class="chip">Indonesian</li>
+          <li class="chip">Japanese</li>
+          <li class="chip">Russian</li>
+          <li class="chip">Thai</li>
+          <li class="chip">Turkish</li>
+        </ul>
+      </div>
+
+      <div class="tbook">
+        <p class="tbook-title">The Pleasures and Sorrows of Work<span class="ko" lang="ko">일의 기쁨과 슬픔</span></p>
+        <ul class="chips">
+          <li class="chip">Chinese (Simplified)</li>
+          <li class="chip">Chinese (Traditional)</li>
+          <li class="chip">Japanese</li>
+          <li class="chip">Thai</li>
+          <li class="chip">Turkish</li>
+          <li class="chip">Vietnamese</li>
+          <li class="chip soon">English · Forthcoming</li>
+        </ul>
+      </div>
+
+      <div class="tbook">
+        <p class="tbook-title">A Driving Course<span class="ko" lang="ko">연수</span></p>
+        <ul class="chips">
+          <li class="chip">Chinese (Traditional)</li>
+        </ul>
+      </div>
+
+      <div class="tbook">
+        <p class="tbook-title">The Season We Sparkle<span class="ko" lang="ko">우리가 반짝이는 계절</span></p>
+        <ul class="chips">
+          <li class="chip soon">Chinese (Traditional) · Forthcoming</li>
+        </ul>
+      </div>
+
+      <div class="tbook">
+        <p class="tbook-title">Laberintos de Neón <span class="ko">anthology</span></p>
+        <ul class="chips">
+          <li class="chip">Spanish</li>
+        </ul>
+      </div>
+
+      <details class="more has-peek">
+      <summary class="sub">All editions with covers<span class="n">17</span><span class="peek" aria-hidden="true"><img src="covers/moon-en.jpg" alt=""><img src="covers/pleasures-zh-cn.jpg" alt=""><img src="covers/moon-tr.jpg" alt=""><img src="covers/moon-ru.jpg" alt=""><img src="covers/pleasures-ja.jpg" alt=""></span></summary>
+      <div class="ed-wrap">
+
+        <div class="ed-group">
+          <p class="ed-group-title">To the Moon<span class="ko" lang="ko">달까지 가자</span></p>
+          <div class="ed-grid">
+            <a class="ed" href="https://library.ltikorea.or.kr/translatedbooks/413573" target="_blank" rel="noopener">
+              <span class="ed-cover"><img src="covers/moon-en.jpg" alt="" loading="lazy" width="400" height="640"></span>
+              <span class="ed-lang">English&nbsp;·&nbsp;2025</span>
+              <span class="ed-title">To the Moon</span>
+              <span class="ed-meta">Bloomsbury<br>Tr. Sean Lin Halbert</span>
+            </a>
+            <a class="ed" href="https://library.ltikorea.or.kr/translatedbooks/413864" target="_blank" rel="noopener">
+              <span class="ed-cover"><img src="covers/moon-nl.jpg" alt="" loading="lazy" width="400" height="640"></span>
+              <span class="ed-lang">Dutch&nbsp;·&nbsp;2025</span>
+              <span class="ed-title" lang="nl">To the Moon</span>
+              <span class="ed-meta">De Geus<br>Tr. Mattho Mandersloot</span>
+            </a>
+            <a class="ed" href="https://library.ltikorea.or.kr/translatedbooks/413485" target="_blank" rel="noopener">
+              <span class="ed-cover"><img src="covers/moon-de.jpg" alt="" loading="lazy" width="400" height="656"></span>
+              <span class="ed-lang">German&nbsp;·&nbsp;2025</span>
+              <span class="ed-title" lang="de">Bis zum Mond</span>
+              <span class="ed-meta">Kiepenheuer &amp; Witsch<br>Tr. Jan Henrik Dirks</span>
+            </a>
+            <a class="ed" href="https://ast.ru/book/do-luny-879908/" target="_blank" rel="noopener">
+              <span class="ed-cover"><img src="covers/moon-ru.jpg" alt="" loading="lazy" width="400" height="635"></span>
+              <span class="ed-lang">Russian&nbsp;·&nbsp;2025</span>
+              <span class="ed-title" lang="ru">До Луны</span>
+              <span class="ed-meta">AST<br>Tr. <span lang="ru">Софья Стройкина</span></span>
+            </a>
+            <a class="ed" href="https://library.ltikorea.or.kr/translatedbooks/413781" target="_blank" rel="noopener">
+              <span class="ed-cover"><img src="covers/moon-tr.jpg" alt="" loading="lazy" width="400" height="588"></span>
+              <span class="ed-lang">Turkish&nbsp;·&nbsp;2025</span>
+              <span class="ed-title" lang="tr">Ay’a Gidelim</span>
+              <span class="ed-meta">Lotus<br>Tr. Tayfun Kartav</span>
+            </a>
+            <a class="ed" href="https://library.ltikorea.or.kr/translatedbooks/410050" target="_blank" rel="noopener">
+              <span class="ed-cover"><img src="covers/moon-id.jpg" style="border-radius:5.5% / 3.6%" alt="" loading="lazy" width="400" height="614"></span>
+              <span class="ed-lang">Indonesian&nbsp;·&nbsp;2023</span>
+              <span class="ed-title" lang="id">Moonbound</span>
+              <span class="ed-meta">Gramedia Pustaka Utama<br>Tr. Iingliana Tan</span>
+            </a>
+            <a class="ed" href="https://library.ltikorea.or.kr/translatedbooks/413198" target="_blank" rel="noopener">
+              <span class="ed-cover"><img src="covers/moon-ja.jpg" alt="" loading="lazy" width="400" height="587"></span>
+              <span class="ed-lang">Japanese&nbsp;·&nbsp;2023</span>
+              <span class="ed-title" lang="ja">月まで行こう</span>
+              <span class="ed-meta">Kobunsha<br>Tr. <span lang="ja">バーチ美和</span></span>
+            </a>
+            <a class="ed" href="https://library.ltikorea.or.kr/translatedbooks/406522" target="_blank" rel="noopener">
+              <span class="ed-cover"><img src="covers/moon-zh-tw.jpg" alt="" loading="lazy" width="329" height="477"></span>
+              <span class="ed-lang">Chinese (Traditional)&nbsp;·&nbsp;2022</span>
+              <span class="ed-title" lang="zh-Hant">我們想去的地方</span>
+              <span class="ed-meta">Thinkingdom<br>Tr. <span lang="zh-Hant">胡椒筒</span></span>
+            </a>
+            <a class="ed" href="https://www.jamsai.com/product-details/9786169405139/to-the-moon/" target="_blank" rel="noopener">
+              <span class="ed-cover"><img src="covers/moon-th.jpg" alt="" loading="lazy" width="400" height="575"></span>
+              <span class="ed-lang">Thai&nbsp;·&nbsp;2022</span>
+              <span class="ed-title" lang="th">เบื่อแล้วทำงาน อยากทะยานสู่ดวงจันทร์</span>
+              <span class="ed-meta">Glow / Jamsai<br>Tr. <span lang="th">ตรองสิริ ทองคำใส</span></span>
+            </a>
+          </div>
+        </div>
+
+        <div class="ed-group">
+          <p class="ed-group-title">The Pleasures and Sorrows of Work<span class="ko" lang="ko">일의 기쁨과 슬픔</span></p>
+          <div class="ed-grid">
+            <a class="ed" href="https://www.biblio-store.com/shop/9786168381311/" target="_blank" rel="noopener">
+              <span class="ed-cover"><img src="covers/pleasures-th.jpg" alt="" loading="lazy" width="400" height="581"></span>
+              <span class="ed-lang">Thai&nbsp;·&nbsp;2026</span>
+              <span class="ed-title" lang="th">ความรู้สึกที่ไม่มีช่องให้กรอก</span>
+              <span class="ed-meta">Biblio<br>Tr. <span lang="th">มินตรา อินทรารัตน์</span></span>
+            </a>
+            <a class="ed" href="https://library.ltikorea.or.kr/translatedbooks/408581" target="_blank" rel="noopener">
+              <span class="ed-cover"><img src="covers/pleasures-tr.jpg" alt="" loading="lazy" width="400" height="581"></span>
+              <span class="ed-lang">Turkish&nbsp;·&nbsp;2022</span>
+              <span class="ed-title" lang="tr">Çalışmanın Hüznü ve Neşesi</span>
+              <span class="ed-meta">Lotus<br>Tr. Sevda Kul</span>
+            </a>
+            <a class="ed" href="https://library.ltikorea.or.kr/translatedbooks/408606" target="_blank" rel="noopener">
+              <span class="ed-cover"><img src="covers/pleasures-vi.jpg" alt="" loading="lazy" width="400" height="584"></span>
+              <span class="ed-lang">Vietnamese&nbsp;·&nbsp;2022</span>
+              <span class="ed-title" lang="vi">Niềm vui và nỗi buồn của công việc</span>
+              <span class="ed-meta">Nhà Xuất Bản Trẻ<br>Tr. Đặng Lam Giang</span>
+            </a>
+            <a class="ed" href="https://library.ltikorea.or.kr/translatedbooks/404868" target="_blank" rel="noopener">
+              <span class="ed-cover"><img src="covers/pleasures-zh-tw.jpg" alt="" loading="lazy" width="400" height="553"></span>
+              <span class="ed-lang">Chinese (Traditional)&nbsp;·&nbsp;2021</span>
+              <span class="ed-title" lang="zh-Hant">從此好好過生活</span>
+              <span class="ed-meta">Thinkingdom<br>Tr. <span lang="zh-Hant">王品涵</span></span>
+            </a>
+            <a class="ed" href="https://library.ltikorea.or.kr/translatedbooks/404394" target="_blank" rel="noopener">
+              <span class="ed-cover"><img src="covers/pleasures-zh-cn.jpg" alt="" loading="lazy" width="400" height="562"></span>
+              <span class="ed-lang">Chinese (Simplified)&nbsp;·&nbsp;2020</span>
+              <span class="ed-title" lang="zh-Hans">工作的喜与悲</span>
+              <span class="ed-meta">CITIC Press<br>Tr. <span lang="zh-Hans">洪微微, 韩亚仁</span></span>
+            </a>
+            <a class="ed" href="https://library.ltikorea.or.kr/translatedbooks/408668" target="_blank" rel="noopener">
+              <span class="ed-cover"><img src="covers/pleasures-ja.jpg" alt="" loading="lazy" width="400" height="593"></span>
+              <span class="ed-lang">Japanese&nbsp;·&nbsp;2020</span>
+              <span class="ed-title" lang="ja">仕事の喜びと哀しみ</span>
+              <span class="ed-meta">CUON<br>Tr. <span lang="ja">牧野美加</span></span>
+            </a>
+          </div>
+        </div>
+
+        <div class="ed-group">
+          <p class="ed-group-title">A Driving Course<span class="ko" lang="ko">연수</span></p>
+          <div class="ed-grid">
+            <a class="ed" href="https://library.ltikorea.or.kr/translatedbooks/411915" target="_blank" rel="noopener">
+              <span class="ed-cover"><img src="covers/driving-zh-tw.jpg" alt="" loading="lazy" width="400" height="556"></span>
+              <span class="ed-lang">Chinese (Traditional)&nbsp;·&nbsp;2024</span>
+              <span class="ed-title" lang="zh-Hant">我們都有一顆星星</span>
+              <span class="ed-meta">Thinkingdom<br>Tr. <span lang="zh-Hant">胡椒筒</span></span>
+            </a>
+          </div>
+        </div>
+
+        <div class="ed-group">
+          <p class="ed-group-title">Laberintos de Neón<span class="ko">anthology</span></p>
+          <div class="ed-grid">
+            <a class="ed" href="https://library.ltikorea.or.kr/translatedbooks/411763" target="_blank" rel="noopener">
+              <span class="ed-cover"><img src="covers/anthology-es.jpg" alt="" loading="lazy" width="400" height="573"></span>
+              <span class="ed-lang">Spanish&nbsp;·&nbsp;2021</span>
+              <span class="ed-title" lang="es">Laberintos de Neón</span>
+              <span class="ed-meta">Hwarang Editorial<br>Tr. Maitane Doniz Fuentes, Danier Rodriguez Cornejo, Yun Yumy</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+      </details>
+    </section>
+
+    <section id="press" aria-label="Press coverage">
+      <p class="section-label">Press Coverage</p>
+      <p class="sub">Reviews</p>
+      <div>
+        <div class="press-item">
+          <p class="press-outlet"><a class="link" href="https://www.ft.com/content/7c36289a-34db-4d47-9385-cdb8027b413f" target="_blank" rel="noopener">Financial Times</a></p>
+          <p class="press-quote">“Their wild ride through financial turmoil demonstrates that the hopes, anxieties and issues of millennials are universal.”</p>
+        </div>
+        <div class="press-item">
+          <p class="press-outlet">Daily Mail</p>
+          <p class="press-quote">“A zeitgeisty rags-to-riches tale.”</p>
+        </div>
+        <div class="press-item">
+          <p class="press-outlet"><a class="link" href="https://www.smh.com.au/culture/books/looking-for-something-to-read-here-are-10-new-books-20250716-p5mfgq.html" target="_blank" rel="noopener">The Sydney Morning Herald</a></p>
+          <p class="press-quote">“An off-beat slice-of-life novel.”</p>
+        </div>
+        <div class="press-item">
+          <p class="press-outlet"><a class="link" href="https://www.marieclaire.co.uk/entertainment/books/summer-book-launches-2025" target="_blank" rel="noopener">Marie Claire UK</a></p>
+          <p class="press-quote">“This modern-day fairy tale is centred on a very modern-day premise: the rollercoaster world of cryptocurrency.”</p>
+        </div>
+        <div class="press-item">
+          <p class="press-outlet"><a class="link" href="https://www.koreatimes.co.kr/lifestyle/books/20251114/k-lit-review-jang-ryujins-to-the-moon-indulges-in-fantasy-of-sudden-wealth" target="_blank" rel="noopener">The Korea Times</a></p>
+          <p class="press-quote">“Equal parts heartfelt and laugh-out-loud comedic.”</p>
+        </div>
+        <div class="press-item">
+          <p class="press-outlet"><a class="link" href="https://www.klwave.or.kr/klw/magazines/2222/articleView.do" target="_blank" rel="noopener">Korean Literature Now</a></p>
+          <p class="press-quote">“Authors of such novels must have a keen sense of what appeals to readers, as Jang clearly does.”</p>
+        </div>
+      </div>
+      <p class="sub">Interviews</p>
+      <div>
+        <div class="press-item">
+          <p class="press-outlet"><a class="link" href="https://www.koreatimes.co.kr/lifestyle/books/20250927/sugar-dusted-korean-bestseller-to-the-moon-takes-off-in-english-edition" target="_blank" rel="noopener">The Korea Times</a></p>
+          <p class="press-headline">Sugar-dusted Korean bestseller ‘To the Moon’ takes off in English edition</p>
+        </div>
+        <div class="press-item">
+          <p class="press-outlet"><a class="link" href="https://www.koreaherald.com/article/10573712" target="_blank" rel="noopener">The Korea Herald</a></p>
+          <p class="press-headline">Jang Ryu-jin sprinkles sugar on upbeat office tale in ‘To the Moon’</p>
+        </div>
+        <div class="press-item">
+          <p class="press-outlet"><a class="link" href="https://www.youtube.com/watch?v=zWtlYC8nQsY" target="_blank" rel="noopener">LTI Korea</a><span class="media-tag">Video</span></p>
+          <p class="press-headline">LITMUS: Authors, Interview with Jang Ryujin</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="adaptations" aria-label="Media adaptations">
+      <p class="section-label">Media Adaptations</p>
+      <p class="sub">TV Series</p>
+      <ul>
+        <li class="item">
+          <span class="year">2025</span>
+          <span class="title"><a href="https://en.wikipedia.org/wiki/To_the_Moon_(TV_series)" target="_blank" rel="noopener">To the Moon</a><span class="ko" lang="ko">달까지 가자</span></span>
+          <span class="detail">MBC · Original Story</span>
+        </li>
+      </ul>
+      <p class="sub">TV Film</p>
+      <ul>
+        <li class="item">
+          <span class="year">2020</span>
+          <span class="title"><a href="https://en.wikipedia.org/wiki/KBS_Drama_Special" target="_blank" rel="noopener">The Pleasures and Sorrows of Work</a><span class="ko" lang="ko">일의 기쁨과 슬픔</span></span>
+          <span class="detail">KBS · Original Story</span>
+        </li>
+      </ul>
+      <p class="sub">Radio</p>
+      <ul>
+        <li class="item">
+          <span class="year">2026</span>
+          <span class="title"><a href="https://podcasts.apple.com/kr/podcast/kbs-%EB%9D%BC%EB%94%94%EC%98%A4-%EA%B7%B9%EC%9E%A5/id958830531" target="_blank" rel="noopener">To the Moon</a><span class="ko" lang="ko">달까지 가자</span></span>
+          <span class="detail">KBS · Original Story</span>
+        </li>
+      </ul>
+      <p class="sub">Theatre</p>
+      <ul>
+        <li class="item">
+          <span class="year">2022</span>
+          <span class="title"><a href="https://www.sejongpac.or.kr/portal/performance/performance/performTicket.do?performIdx=33464&amp;menuNo=200320" target="_blank" rel="noopener">The Pleasures and Sorrows of Work</a><span class="ko" lang="ko">일의 기쁨과 슬픔</span></span>
+          <span class="detail">Seoul Metropolitan Theatre · Original Story · Revival</span>
+        </li>
+        <li class="item">
+          <span class="year">2021</span>
+          <span class="title"><a href="https://www.yna.co.kr/view/AKR20210914029900005" target="_blank" rel="noopener">The Pleasures and Sorrows of Work</a><span class="ko" lang="ko">일의 기쁨과 슬픔</span></span>
+          <span class="detail">Seoul Metropolitan Theatre · Original Story · Premiere</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="awards" aria-label="Awards">
+      <p class="section-label">Awards</p>
+      <ul>
+        <li class="item">
+          <span class="year">2020</span>
+          <span class="name">Shim Hun Literary Award<span class="ko" lang="ko">심훈문학대상</span></span>
+          <span class="detail strong">Winner</span>
+        </li>
+        <li class="item">
+          <span class="year">2020</span>
+          <span class="name">Munhakdongne Young Writers’ Award<span class="ko" lang="ko">젊은작가상</span></span>
+          <span class="detail strong">Winner</span>
+        </li>
+        <li class="item">
+          <span class="year">2018</span>
+          <span class="name">Changbi Prize for New Figures in Literature<span class="ko" lang="ko">창비신인소설상</span></span>
+          <span class="detail strong">Winner</span>
+        </li>
+        <li class="item">
+          <span class="year">2020</span>
+          <span class="name">Booksellers’ Book of the Year<span class="ko" lang="ko">서점인이 뽑은 올해의 책</span></span>
+          <span class="detail strong">Winner</span>
+        </li>
+        <li class="item">
+          <span class="year">2020–23</span>
+          <span class="name">Book of the Year selections, including Kyobo Book Centre, YES24 and Aladin</span>
+          <span class="detail">7 times</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="events" aria-label="International events">
+      <p class="section-label">International Events</p>
+      <p class="sub">Abroad</p>
+      <ul>
+        <li class="item">
+          <span class="year">2025</span>
+          <span class="name">Università per Stranieri di Siena</span>
+          <span class="detail">Siena, Italy</span>
+        </li>
+        <li class="item">
+          <span class="year">2024</span>
+          <span class="name">Istanbul University</span>
+          <span class="detail">Istanbul, Türkiye</span>
+        </li>
+        <li class="item">
+          <span class="year">2023</span>
+          <span class="name"><a class="link" href="https://prtimes.jp/main/html/rd/p/000000036.000089890.html" target="_blank" rel="noopener">Korean Cultural Center Osaka</a></span>
+          <span class="detail">Osaka, Japan</span>
+        </li>
+        <li class="item">
+          <span class="year">2023</span>
+          <span class="name"><a class="link" href="https://www.openbook.org.tw/article/p-67231" target="_blank" rel="noopener">Taipei International Book Exhibition</a></span>
+          <span class="detail">Taipei, Taiwan</span>
+        </li>
+      </ul>
+      <details class="more">
+      <summary class="sub">International festivals in Korea<span class="n">5</span></summary>
+      <ul>
+        <li class="item">
+          <span class="year">2026</span>
+          <span class="name"><a class="link" href="https://sibf.kr/page/13_seminar?idx=131&amp;gbn=2&amp;year=2026" target="_blank" rel="noopener">Seoul International Book Fair</a></span>
+          <span class="detail">Seoul</span>
+        </li>
+        <li class="item">
+          <span class="year">2025</span>
+          <span class="name"><a class="link" href="https://sibf.kr/page/13_seminar?idx=117&amp;gbn=2&amp;year=2025" target="_blank" rel="noopener">Seoul International Book Fair</a></span>
+          <span class="detail">Seoul</span>
+        </li>
+        <li class="item">
+          <span class="year">2024</span>
+          <span class="name"><a class="link" href="https://www.ajunews.com/view/20240920083649396" target="_blank" rel="noopener">Asia Literature Festival</a></span>
+          <span class="detail">Gwangju</span>
+        </li>
+        <li class="item">
+          <span class="year">2020</span>
+          <span class="name"><a class="link" href="https://library.ltikorea.or.kr/discover/item/171/1000567" target="_blank" rel="noopener">Seoul International Writers’ Festival</a></span>
+          <span class="detail">Seoul</span>
+        </li>
+        <li class="item">
+          <span class="year">2020</span>
+          <span class="name"><a class="link" href="https://sibf.kr/page/13_seminar?idx=68&amp;gbn=2&amp;year=2020" target="_blank" rel="noopener">Seoul International Book Fair</a></span>
+          <span class="detail">Seoul</span>
+        </li>
+      </ul>
+      </details>
+      <details class="more">
+      <summary class="sub">Translation workshops<span class="n">6</span></summary>
+      <ul>
+        <li class="item">
+          <span class="year">2026</span>
+          <span class="name">LTI Korea Translation Academy</span>
+          <span class="detail">Russian</span>
+        </li>
+        <li class="item">
+          <span class="year">2024</span>
+          <span class="name">LTI Korea Translation Academy</span>
+          <span class="detail">Spanish</span>
+        </li>
+        <li class="item">
+          <span class="year">2024</span>
+          <span class="name">LTI Korea Translation Academy</span>
+          <span class="detail">German</span>
+        </li>
+        <li class="item">
+          <span class="year">2023</span>
+          <span class="name">Moscow State Linguistic University</span>
+          <span class="detail">Russian</span>
+        </li>
+        <li class="item">
+          <span class="year">2021</span>
+          <span class="name">Dalian University of Foreign Languages</span>
+          <span class="detail">Chinese</span>
+        </li>
+        <li class="item">
+          <span class="year">2020</span>
+          <span class="name">LTI Korea Translation Academy</span>
+          <span class="detail">French</span>
+        </li>
+      </ul>
+      </details>
+    </section>
+
+    <section id="education" aria-label="Education">
+      <p class="section-label">Education</p>
+      <div class="edu">
+        <div>
+          <p class="edu-degree">Yonsei University — BA</p>
+          <p class="edu-field">Sociology</p>
+        </div>
+        <div>
+          <p class="edu-degree">Dongguk University — MA coursework completed</p>
+          <p class="edu-field">Korean Literature, Creative Writing</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="social" aria-label="Social media">
+      <p class="section-label">Social Media</p>
+      <div class="social">
+        <a href="https://www.instagram.com/j_ryujin_/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>© 2026 Jang Ryujin</footer>
+
+</div>
+</body>
+</html>
