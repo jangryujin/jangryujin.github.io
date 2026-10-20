@@ -157,6 +157,21 @@ a:focus-visible {
 }
 .hero-desc .sep { color: var(--light); }
 
+.hero-jump {
+  margin-top: 20px;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.hero-jump a {
+  color: var(--mid);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 2px;
+  transition: color 0.15s, border-color 0.15s;
+}
+.hero-jump a:hover { color: var(--accent); border-color: var(--accent); }
+html { scroll-behavior: smooth; }
+
 /* ---------- Sections ---------- */
 section {
   padding-block: 36px 72px;
@@ -267,7 +282,7 @@ section {
 .name .ko {
   display: inline-block;
   max-width: 100%;
-  margin-left: 0.5rem;
+  margin-left: 0;
   font-size: 0.8125rem;
   font-weight: 300;
   color: var(--light);
@@ -344,7 +359,7 @@ section {
   font-size: 1rem;
 }
 .tbook-title .ko {
-  margin-left: 0.5rem;
+  margin-left: 0;
   font-size: 0.8125rem;
   color: var(--light);
 }
@@ -381,7 +396,7 @@ section {
   font-size: 0.9rem;
 }
 .ed-group-title .ko {
-  margin-left: 0.5rem;
+  margin-left: 0;
   font-size: 0.78rem;
   color: var(--light);
 }
@@ -476,6 +491,7 @@ section {
   color: var(--light);
   vertical-align: 2px;
 }
+.title .media-tag { margin-left: 10px; vertical-align: 2px; }
 .press-headline {
   margin-top: 5px;
   font-size: 0.82rem;
@@ -497,6 +513,8 @@ section {
 }
 
 /* Social */
+.contact-social { margin-top: 36px; }
+.contact-social .contact-label { margin-bottom: 10px; }
 .social {
   display: flex;
   flex-wrap: wrap;
@@ -544,6 +562,7 @@ footer {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
   .title a, .social a, .ed-cover img, .ed-title { transition: none; }
 }
 </style>
@@ -557,33 +576,14 @@ footer {
       <div class="hero-text">
         <h1 class="hero-name">Jang Ryujin<span class="ko" lang="ko">장류진</span></h1>
         <p class="hero-desc">
-          <strong>Novelist, Essayist</strong><br>
-          Author of <em>To the Moon</em> and <em>The Pleasures and Sorrows of Work</em> <span class="sep">·</span> 17 translated editions in 11 languages <span class="sep">·</span> Published in English by Bloomsbury <span class="sep">·</span> Adapted for television, radio and the stage<br><br>
-          Seoul, Republic of Korea
+          <strong>Novelist and essayist based in Seoul.</strong> Her novel <em>To the Moon</em> and story collection <em>The Pleasures and Sorrows of Work</em> have appeared in 17 translated editions across 11 languages, including English from Bloomsbury, and have been adapted for television, radio and the stage.
         </p>
+        <p class="hero-jump"><a href="#contact">Contact</a></p>
       </div>
     </div>
   </header>
 
   <main>
-
-    <section id="contact" aria-label="Contact">
-      <p class="section-label">Contact</p>
-      <div class="contact-grid">
-        <div>
-          <p class="contact-label">International</p>
-          <p class="contact-name"><a class="link" href="https://grayhawk-agency.com/books-authors/jang-ryujin/" target="_blank" rel="noopener">The Grayhawk Agency</a></p>
-          <p class="contact-note">Translation rights</p>
-          <p class="contact-email"><a href="mailto:info@grayhawk-agency.com">info@grayhawk-agency.com</a></p>
-        </div>
-        <div>
-          <p class="contact-label">Korea</p>
-          <p class="contact-name"><a class="link" href="http://www.blossomcreative.co.kr/" target="_blank" rel="noopener">Blossom Creative</a></p>
-          <p class="contact-note" lang="ko">국내 판권 및 협업 문의</p>
-          <p class="contact-email"><a href="mailto:blossomcreative@naver.com">blossomcreative@naver.com</a></p>
-        </div>
-      </div>
-    </section>
 
     <section id="work" aria-label="Work">
       <p class="section-label">Work</p>
@@ -591,27 +591,27 @@ footer {
       <ul>
         <li class="item">
           <span class="year">2025</span>
-          <span class="title"><a href="https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000011088186" target="_blank" rel="noopener">The Season We Sparkle</a><span class="ko" lang="ko">우리가 반짝이는 계절</span></span>
+          <span class="title"><a href="https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000011088186" target="_blank" rel="noopener">The Season We Sparkle</a> <span class="ko" lang="ko">우리가 반짝이는 계절</span></span>
           <span class="detail">Memoir</span>
         </li>
         <li class="item">
           <span class="year">2023</span>
-          <span class="title"><a href="https://library.ltikorea.or.kr/originalworks/411914" target="_blank" rel="noopener">A Driving Course</a><span class="ko" lang="ko">연수</span></span>
+          <span class="title"><a href="https://library.ltikorea.or.kr/originalworks/411914" target="_blank" rel="noopener">A Driving Course</a> <span class="ko" lang="ko">연수</span></span>
           <span class="detail">Short stories</span>
         </li>
         <li class="item">
           <span class="year">2021</span>
-          <span class="title"><a href="https://library.ltikorea.or.kr/originalworks/406521" target="_blank" rel="noopener">To the Moon</a><span class="ko" lang="ko">달까지 가자</span></span>
+          <span class="title"><a href="https://library.ltikorea.or.kr/originalworks/406521" target="_blank" rel="noopener">To the Moon</a> <span class="ko" lang="ko">달까지 가자</span></span>
           <span class="detail">Novel</span>
         </li>
         <li class="item">
           <span class="year">2020</span>
-          <span class="title"><a href="https://klwave.or.kr/klw/books/408919/featuredView.do" target="_blank" rel="noopener">Maya in Tokyo</a><span class="ko" lang="ko">도쿄의 마야</span></span>
+          <span class="title"><a href="https://klwave.or.kr/klw/books/408919/featuredView.do" target="_blank" rel="noopener">Maya in Tokyo</a> <span class="ko" lang="ko">도쿄의 마야</span></span>
           <span class="detail">Short story</span>
         </li>
         <li class="item">
           <span class="year">2019</span>
-          <span class="title"><a href="https://library.ltikorea.or.kr/originalworks/103910" target="_blank" rel="noopener">The Pleasures and Sorrows of Work</a><span class="ko" lang="ko">일의 기쁨과 슬픔</span></span>
+          <span class="title"><a href="https://library.ltikorea.or.kr/originalworks/103910" target="_blank" rel="noopener">The Pleasures and Sorrows of Work</a> <span class="ko" lang="ko">일의 기쁨과 슬픔</span></span>
           <span class="detail">Short stories</span>
         </li>
       </ul>
@@ -622,7 +622,7 @@ footer {
       <p class="intro">Works published in 17 translated editions across 11 languages.</p>
 
       <div class="tbook">
-        <p class="tbook-title">To the Moon<span class="ko" lang="ko">달까지 가자</span></p>
+        <p class="tbook-title">To the Moon <span class="ko" lang="ko">달까지 가자</span></p>
         <ul class="chips">
           <li class="chip">English</li>
           <li class="chip">Chinese (Traditional)</li>
@@ -637,7 +637,7 @@ footer {
       </div>
 
       <div class="tbook">
-        <p class="tbook-title">The Pleasures and Sorrows of Work<span class="ko" lang="ko">일의 기쁨과 슬픔</span></p>
+        <p class="tbook-title">The Pleasures and Sorrows of Work <span class="ko" lang="ko">일의 기쁨과 슬픔</span></p>
         <ul class="chips">
           <li class="chip">Chinese (Simplified)</li>
           <li class="chip">Chinese (Traditional)</li>
@@ -650,21 +650,21 @@ footer {
       </div>
 
       <div class="tbook">
-        <p class="tbook-title">A Driving Course<span class="ko" lang="ko">연수</span></p>
+        <p class="tbook-title">A Driving Course <span class="ko" lang="ko">연수</span></p>
         <ul class="chips">
           <li class="chip">Chinese (Traditional)</li>
         </ul>
       </div>
 
       <div class="tbook">
-        <p class="tbook-title">The Season We Sparkle<span class="ko" lang="ko">우리가 반짝이는 계절</span></p>
+        <p class="tbook-title">The Season We Sparkle <span class="ko" lang="ko">우리가 반짝이는 계절</span></p>
         <ul class="chips">
           <li class="chip soon">Chinese (Traditional) · Forthcoming</li>
         </ul>
       </div>
 
       <div class="tbook">
-        <p class="tbook-title">Laberintos de Neón <span class="ko">anthology</span></p>
+        <p class="tbook-title">Laberintos de Neón <span class="ko">anthology</span></p>
         <ul class="chips">
           <li class="chip">Spanish</li>
         </ul>
@@ -675,7 +675,7 @@ footer {
       <div class="ed-wrap">
 
         <div class="ed-group">
-          <p class="ed-group-title">To the Moon<span class="ko" lang="ko">달까지 가자</span></p>
+          <p class="ed-group-title">To the Moon <span class="ko" lang="ko">달까지 가자</span></p>
           <div class="ed-grid">
             <a class="ed" href="https://library.ltikorea.or.kr/translatedbooks/413573" target="_blank" rel="noopener">
               <span class="ed-cover"><img src="covers/moon-en.jpg" alt="" loading="lazy" width="400" height="640"></span>
@@ -735,7 +735,7 @@ footer {
         </div>
 
         <div class="ed-group">
-          <p class="ed-group-title">The Pleasures and Sorrows of Work<span class="ko" lang="ko">일의 기쁨과 슬픔</span></p>
+          <p class="ed-group-title">The Pleasures and Sorrows of Work <span class="ko" lang="ko">일의 기쁨과 슬픔</span></p>
           <div class="ed-grid">
             <a class="ed" href="https://www.biblio-store.com/shop/9786168381311/" target="_blank" rel="noopener">
               <span class="ed-cover"><img src="covers/pleasures-th.jpg" alt="" loading="lazy" width="400" height="581"></span>
@@ -777,7 +777,7 @@ footer {
         </div>
 
         <div class="ed-group">
-          <p class="ed-group-title">A Driving Course<span class="ko" lang="ko">연수</span></p>
+          <p class="ed-group-title">A Driving Course <span class="ko" lang="ko">연수</span></p>
           <div class="ed-grid">
             <a class="ed" href="https://library.ltikorea.or.kr/translatedbooks/411915" target="_blank" rel="noopener">
               <span class="ed-cover"><img src="covers/driving-zh-tw.jpg" alt="" loading="lazy" width="400" height="556"></span>
@@ -789,7 +789,7 @@ footer {
         </div>
 
         <div class="ed-group">
-          <p class="ed-group-title">Laberintos de Neón<span class="ko">anthology</span></p>
+          <p class="ed-group-title">Laberintos de Neón <span class="ko">anthology</span></p>
           <div class="ed-grid">
             <a class="ed" href="https://library.ltikorea.or.kr/translatedbooks/411763" target="_blank" rel="noopener">
               <span class="ed-cover"><img src="covers/anthology-es.jpg" alt="" loading="lazy" width="400" height="573"></span>
@@ -856,37 +856,37 @@ footer {
       <ul>
         <li class="item">
           <span class="year">2025</span>
-          <span class="title"><a href="https://en.wikipedia.org/wiki/To_the_Moon_(TV_series)" target="_blank" rel="noopener">To the Moon</a><span class="ko" lang="ko">달까지 가자</span></span>
-          <span class="detail">MBC · Original Story</span>
+          <span class="title"><a href="https://en.wikipedia.org/wiki/To_the_Moon_(TV_series)" target="_blank" rel="noopener">To the Moon</a> <span class="ko" lang="ko">달까지 가자</span></span>
+          <span class="detail">MBC · Original Story</span>
         </li>
       </ul>
       <p class="sub">TV Film</p>
       <ul>
         <li class="item">
           <span class="year">2020</span>
-          <span class="title"><a href="https://en.wikipedia.org/wiki/KBS_Drama_Special" target="_blank" rel="noopener">The Pleasures and Sorrows of Work</a><span class="ko" lang="ko">일의 기쁨과 슬픔</span></span>
-          <span class="detail">KBS · Original Story</span>
+          <span class="title"><a href="https://en.wikipedia.org/wiki/KBS_Drama_Special" target="_blank" rel="noopener">The Pleasures and Sorrows of Work</a> <span class="ko" lang="ko">일의 기쁨과 슬픔</span></span>
+          <span class="detail">KBS · Original Story</span>
         </li>
       </ul>
       <p class="sub">Radio</p>
       <ul>
         <li class="item">
           <span class="year">2026</span>
-          <span class="title"><a href="https://podcasts.apple.com/kr/podcast/kbs-%EB%9D%BC%EB%94%94%EC%98%A4-%EA%B7%B9%EC%9E%A5/id958830531" target="_blank" rel="noopener">To the Moon</a><span class="ko" lang="ko">달까지 가자</span></span>
-          <span class="detail">KBS · Original Story</span>
+          <span class="title"><a href="https://podcasts.apple.com/kr/podcast/kbs-%EB%9D%BC%EB%94%94%EC%98%A4-%EA%B7%B9%EC%9E%A5/id958830531" target="_blank" rel="noopener">To the Moon</a> <span class="ko" lang="ko">달까지 가자</span></span>
+          <span class="detail">KBS · Original Story</span>
         </li>
       </ul>
       <p class="sub">Theatre</p>
       <ul>
         <li class="item">
           <span class="year">2022</span>
-          <span class="title"><a href="https://www.sejongpac.or.kr/portal/performance/performance/performTicket.do?performIdx=33464&amp;menuNo=200320" target="_blank" rel="noopener">The Pleasures and Sorrows of Work</a><span class="ko" lang="ko">일의 기쁨과 슬픔</span></span>
-          <span class="detail">Seoul Metropolitan Theatre · Original Story · Revival</span>
+          <span class="title"><a href="https://www.sejongpac.or.kr/portal/performance/performance/performTicket.do?performIdx=33464&amp;menuNo=200320" target="_blank" rel="noopener">The Pleasures and Sorrows of Work</a> <span class="ko" lang="ko">일의 기쁨과 슬픔</span><span class="media-tag">Revival</span></span>
+          <span class="detail">Seoul Metropolitan Theatre · Original Story</span>
         </li>
         <li class="item">
           <span class="year">2021</span>
-          <span class="title"><a href="https://www.yna.co.kr/view/AKR20210914029900005" target="_blank" rel="noopener">The Pleasures and Sorrows of Work</a><span class="ko" lang="ko">일의 기쁨과 슬픔</span></span>
-          <span class="detail">Seoul Metropolitan Theatre · Original Story · Premiere</span>
+          <span class="title"><a href="https://www.yna.co.kr/view/AKR20210914029900005" target="_blank" rel="noopener">The Pleasures and Sorrows of Work</a> <span class="ko" lang="ko">일의 기쁨과 슬픔</span><span class="media-tag">Premiere</span></span>
+          <span class="detail">Seoul Metropolitan Theatre · Original Story</span>
         </li>
       </ul>
     </section>
@@ -896,22 +896,22 @@ footer {
       <ul>
         <li class="item">
           <span class="year">2020</span>
-          <span class="name">Shim Hun Literary Award<span class="ko" lang="ko">심훈문학대상</span></span>
+          <span class="name">Shim Hun Literary Award <span class="ko" lang="ko">심훈문학대상</span></span>
           <span class="detail strong">Winner</span>
         </li>
         <li class="item">
           <span class="year">2020</span>
-          <span class="name">Munhakdongne Young Writers’ Award<span class="ko" lang="ko">젊은작가상</span></span>
+          <span class="name">Munhakdongne Young Writers’ Award <span class="ko" lang="ko">젊은작가상</span></span>
           <span class="detail strong">Winner</span>
         </li>
         <li class="item">
           <span class="year">2018</span>
-          <span class="name">Changbi Prize for New Figures in Literature<span class="ko" lang="ko">창비신인소설상</span></span>
+          <span class="name">Changbi Prize for New Figures in Literature <span class="ko" lang="ko">창비신인소설상</span></span>
           <span class="detail strong">Winner</span>
         </li>
         <li class="item">
           <span class="year">2020</span>
-          <span class="name">Booksellers’ Book of the Year<span class="ko" lang="ko">서점인이 뽑은 올해의 책</span></span>
+          <span class="name">Booksellers’ Book of the Year <span class="ko" lang="ko">서점인이 뽑은 올해의 책</span></span>
           <span class="detail strong">Winner</span>
         </li>
         <li class="item">
@@ -1028,10 +1028,27 @@ footer {
       </div>
     </section>
 
-    <section id="social" aria-label="Social media">
-      <p class="section-label">Social Media</p>
-      <div class="social">
-        <a href="https://www.instagram.com/j_ryujin_/" target="_blank" rel="noopener">Instagram</a>
+    <section id="contact" aria-label="Contact">
+      <p class="section-label">Contact</p>
+      <div class="contact-grid">
+        <div>
+          <p class="contact-label">International</p>
+          <p class="contact-name"><a class="link" href="https://grayhawk-agency.com/books-authors/jang-ryujin/" target="_blank" rel="noopener">The Grayhawk Agency</a></p>
+          <p class="contact-note">Translation rights</p>
+          <p class="contact-email"><a href="mailto:info@grayhawk-agency.com">info@grayhawk-agency.com</a></p>
+        </div>
+        <div>
+          <p class="contact-label">Korea</p>
+          <p class="contact-name"><a class="link" href="http://www.blossomcreative.co.kr/" target="_blank" rel="noopener">Blossom Creative</a></p>
+          <p class="contact-note" lang="ko">국내 판권 및 협업 문의</p>
+          <p class="contact-email"><a href="mailto:blossomcreative@naver.com">blossomcreative@naver.com</a></p>
+        </div>
+      </div>
+      <div class="contact-social">
+        <p class="contact-label">Social media</p>
+        <div class="social">
+          <a href="https://www.instagram.com/j_ryujin_/" target="_blank" rel="noopener">Instagram</a>
+        </div>
       </div>
     </section>
 
